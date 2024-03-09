@@ -1,0 +1,16 @@
+{
+    "name": "danarmas-landingpage",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev:css": "npx tailwindcss -i ./styles.css -o ./dist/style.css --watch",
+        "build:css": "npx tailwindcss -i ./styles.css -o ./dist/style.css --minify"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "tailwindcss": "^3.4.1"
+    }
+}

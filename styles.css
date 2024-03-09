@@ -1,0 +1,125 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body.sidebar-open {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#backdrop {
+    transition: opacity 0.4s ease-in-out;
+}
+
+#backdrop:not(.hidden) {
+    opacity: 0.5;
+}
+
+#sidebar {
+    transition: transform 0.4s ease-in-out;
+    z-index: 30;
+}
+
+.accordion-toggle {
+    display: none;
+    transition: transform 0.4s ease;
+}
+
+.accordion-title {
+    cursor: pointer;
+    user-select: none;
+}
+
+.accordion-content {
+    display: none;
+}
+
+.accordion-toggle:checked + .accordion-title + .accordion-content {
+    display: flex;
+}
+
+.accordion-toggle:checked + .accordion-title .rotate-icon {
+    transition: transform 0.5s ease;
+    transform: rotate(180deg);
+}
+
+.accordion-toggle + .accordion-title .rotate-icon {
+    transition: transform 0.5s ease;
+    transform: rotate(0deg);
+}
+
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.carousel-inner {
+    position: inherit;
+    display: flex;
+    transition: transform 0.5s ease;
+    pointer-events: auto;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    width: 100%;
+    pointer-events: auto;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    pointer-events: auto;
+}
+
+.carousel-nav button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    pointer-events: auto;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.carousel-dot.active {
+    background-color: rgba(0, 0, 0, 1);
+    pointer-events: auto;
+}
