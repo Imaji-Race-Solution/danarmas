@@ -6,6 +6,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    /* overflow-x: hidden; */
 }
 
 body.sidebar-open {
@@ -55,11 +56,6 @@ body.sidebar-open {
     transform: rotate(0deg);
 }
 
-.carousel-container {
-    overflow: hidden;
-    position: relative;
-}
-
 .carousel {
     overflow: hidden;
     position: relative;
@@ -91,7 +87,8 @@ body.sidebar-open {
 }
 
 .carousel-nav button {
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(107, 107, 107, 0.3);
+    border-radius: 50%;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -101,7 +98,7 @@ body.sidebar-open {
 
 .carousel-dots {
     position: absolute;
-    bottom: 10px;
+    bottom: 16px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -112,7 +109,7 @@ body.sidebar-open {
 .carousel-dot {
     width: 10px;
     height: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #d9d9d9;
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
@@ -120,6 +117,31 @@ body.sidebar-open {
 }
 
 .carousel-dot.active {
-    background-color: rgba(0, 0, 0, 1);
+    background-color: #75c59d;
     pointer-events: auto;
+    scale: 1.5;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scroll-item {
+    flex: 1 1 auto;
+    width: 200px;
+    min-width: 200px;
+    margin-right: 10px;
+    scroll-snap-align: start;
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
 }
