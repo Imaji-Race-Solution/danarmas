@@ -576,14 +576,6 @@ video {
   top: 0px;
 }
 
-.top-6 {
-  top: 1.5rem;
-}
-
-.top-4 {
-  top: 1rem;
-}
-
 .top-5 {
   top: 1.25rem;
 }
@@ -629,30 +621,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-\[250px\] {
-  margin-top: 250px;
-}
-
-.mt-\[100px\] {
-  margin-top: 100px;
-}
-
-.mt-\[20\] {
-  margin-top: 20;
-}
-
-.mt-\[24px\] {
-  margin-top: 24px;
-}
-
-.mt-\[32px\] {
-  margin-top: 32px;
-}
-
-.mt-\[28px\] {
-  margin-top: 28px;
 }
 
 .flex {
