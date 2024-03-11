@@ -172,3 +172,48 @@ backdrop.addEventListener('click', (event) => {
         toggleSidebar();
     }
 });
+
+// Counter
+const counters = document.querySelectorAll('.counter');
+
+const observerCounter = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            startCounter(entry.target);
+            observerCounter.unobserve(entry.target);
+        } else {
+            console.log('not visited');
+        }
+    });
+});
+
+counters.forEach((counter) => {
+    observerCounter.observe(counter);
+});
+
+const startCounter = (counter) => {
+    const to = parseFloat(counter.getAttribute('count-to'));
+    const duration = parseFloat(counter.getAttribute('duration'));
+    const symbol = counter.getAttribute('end-symbol');
+    console.log(symbol);
+
+    let counterValue = 0;
+    const increment = to / (duration / 5);
+
+    const timer = setInterval(() => {
+        counterValue += increment;
+        counter.textContent = Math.floor(counterValue);
+        if (counterValue >= to) {
+            clearInterval(timer);
+            counter.textContent = to;
+            if (symbol !== null) {
+                const span = document.createElement('span');
+                if (symbol === '+') {
+                    span.className = 'text-hijau';
+                }
+                span.innerHTML = symbol;
+                counter.appendChild(span);
+            }
+        }
+    }, 10);
+};
