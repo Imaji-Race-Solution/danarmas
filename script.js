@@ -283,7 +283,7 @@ const observerCounter = new IntersectionObserver(
             if (entry.isIntersecting && entry.intersectionRatio > 0) {
                 setTimeout(() => {
                     startCounter(entry.target);
-                }, 1000);
+                }, 800);
                 observerCounter.unobserve(entry.target);
             }
         });
@@ -304,7 +304,7 @@ const typeWriterEffect = (element) => {
 
     let words = text.split(' ');
 
-    function typeWord(wordIndex) {
+    const typeWord = (wordIndex) => {
         if (wordIndex < words.length) {
             let word = words[wordIndex];
             let wordHtml = '<span';
@@ -321,11 +321,11 @@ const typeWriterEffect = (element) => {
         } else {
             element.classList.add('finished');
         }
-    }
+    };
 
-    function typeCharacters(charIndex, word, wordSpan, wordIndex) {
+    const typeCharacters = (charIndex, word, wordSpan, wordIndex) => {
         if (charIndex < word.length) {
-            setTimeout(function () {
+            setTimeout(() => {
                 wordSpan.textContent += word.charAt(charIndex);
                 typeCharacters(charIndex + 1, word, wordSpan, wordIndex);
             }, 100);
@@ -333,7 +333,7 @@ const typeWriterEffect = (element) => {
             element.innerHTML += ' ';
             typeWord(wordIndex + 1);
         }
-    }
+    };
 
     typeWord(0);
 };
