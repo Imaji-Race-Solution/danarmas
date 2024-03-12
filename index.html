@@ -12,22 +12,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
     <div
-        class="flex flex-col min-h-[200vh] px-4 sm:px-8 lg:px-10 xl:px-12 gap-4 py-3 font-poppins">
+        class="flex flex-col px-4 sm:px-8 lg:px-10 xl:px-12 gap-4 py-3 font-poppins">
 
         <!-- Navbar -->
         <nav
             class="flex flex-row justify-between items-center sticky top-0 py-4 gap-4 bg-white z-50">
-
             <a class="cursor-pointer" href="">
                 <img src="./assets/logo-new.png"
-                    class="w-[200px] sm:w-[230px] h-auto" alt="logo" />
+                    class="w-[180px] sm:w-[225px] h-auto" alt="logo" />
             </a>
-
             <div
                 class="md:flex hidden flex-row gap-8 tracking-[2px] text-xs md:text-sm justify-center">
                 <div
@@ -134,8 +132,6 @@
 
                     </div>
                 </div>
-
-
             </div>
 
             <!-- Menu Mobile -->
@@ -301,32 +297,33 @@
 
         <!-- Main Page -->
         <div
-            class="flex flex-col justify-between md:container font-poppins text-hitam md:mt-2 mt-3 gap-20">
+            class="flex flex-col justify-between md:container font-poppins text-hitam md:mt-2 mt-3 gap-20 overflow-hidden">
 
             <!-- Section 1 -->
-            <div class="flex flex-col justify-between gap-8 md:gap-4">
+            <div class="flex flex-col justify-between gap-8 md:gap-4 section-1">
                 <img src="./assets/logo-silver-kris.png"
-                    class="w-[175px] md:w-[250px] h-full cursor-pointer my-auto"
+                    class="w-[175px] md:w-[225px] h-full cursor-pointer my-auto"
                     alt="logo-silver-kris" />
 
                 <div
-                    class="flex flex-col md:flex-row justify-between mt-4 md:items-center gap-8 md:gap-4">
-                    <p class="font-semibold text-[28px] md:text-[52px]">
-                        Excitement through
-                        <br /><span class="text-hijau">Collaboration</span>
-                    </p>
+                    class="flex flex-col md:flex-row justify-between mt-4 md:items-center gap-8 md:gap-4 overflow-hidden">
+                    <div class="typewriter w-[100%] md:w-[50%]">
+                        <p class="font-semibold text-[28px] md:text-[52px] typewriter-p"
+                            text="Excitement through Collaboration">
+                        </p>
+                    </div>
                     <p data-i18n="section1"
-                        class="leading-[30px] md:leading-[35px] w-[100%] md:w-[40%] align-middle tracking-[2px] text-hitam font-normal text-justify lg:text-[18px] md:text-[16px] sm:text-[14px] text-[14px]">
+                        class="leading-[30px] md:leading-[35px] w-[100%] md:w-[50%] tracking-[2px] text-hitam font-normal text-justify lg:text-[18px] md:text-[16px] sm:text-[14px] text-[14px] slide-left h-auto">
                     </p>
                 </div>
 
                 <img src="./assets/section1.png" alt="section1"
-                    class="w-full h-auto mt-8" />
+                    class="w-full h-auto mt-8 slide-right overflow-hidden" />
             </div>
 
             <!-- Section 2 -->
             <div
-                class="flex flex-col md:flex-row justify-between mt-4 md:items-start gap-8 md:gap-4">
+                class="flex flex-col md:flex-row justify-between mt-4 md:items-start gap-8 md:gap-4 section-2 opacity-0">
                 <p class="font-semibold text-[28px] md:text-[40px] underline underline-offset-[18px] decoration-hijau"
                     data-i18n="our_vision">
                 </p>
@@ -341,34 +338,37 @@
                     data-i18n="capacity">
                 </p>
                 <div
-                    class="grid grid-cols-2 md:flex md:flex-row md:justify-between gap-8 transition-all">
+                    class="grid grid-cols-2 md:flex md:flex-row md:justify-between gap-8">
                     <div class="flex flex-col gap-2">
                         <p class="font-semibold text-[30px] sm:text-[40px] md:text-[48px] lg:text-[56px] counter"
                             duration="750" count-to="76.35" decimal="true"
                             end-symbol="%">
-                            76.35<span>%</span></p>
+                        </p>
                         <p data-i18n="capacity_1" class="w-[85%] font-medium">
                         </p>
                     </div>
                     <div class="flex flex-col gap-2">
                         <p class="font-semibold text-[30px] sm:text-[40px] md:text-[48px] lg:text-[56px] counter"
                             duration="1000" count-to="66.990" decimal="true">
-                            66.990</p>
-                        <p data-i18n="capacity_2" class="w-[85%] font-medium">
+                        </p>
+                        <p data-i18n="capacity_2"
+                            class="w-[95%] md:w-[85%] font-medium">
                         </p>
                     </div>
                     <div class="flex flex-col gap-2">
                         <p class="font-semibold text-[30px] sm:text-[40px] md:text-[48px] lg:text-[56px] counter"
-                            duration="1250" count-to="73000" decimal="true">
-                            73.000</p>
-                        <p data-i18n="capacity_3" class="w-[80%] font-medium">
+                            duration="1250" count-to="73000">
+                        </p>
+                        <p data-i18n="capacity_3"
+                            class="w-[95%] md:w-[80%] font-medium">
                         </p>
                     </div>
                     <div class="flex flex-col gap-2 ">
                         <p class="font-semibold text-[30px] sm:text-[40px] md:text-[48px] lg:text-[56px] counter"
                             duration="1500" count-to="960" end-symbol="+">
-                            0<span class="text-hijau">+</span></p>
-                        <p data-i18n="capacity_4" class="w-[85%] font-medium">
+                        </p>
+                        <p data-i18n="capacity_4"
+                            class="w-[95%] md:w-[85%] font-medium">
                         </p>
                     </div>
                 </div>
@@ -378,17 +378,17 @@
             <div
                 class="flex flex-col md:flex-row mt-4 md:items-center gap-8 md:gap-4">
                 <div class="flex flex-col gap-4">
-                    <p class="font-semibold text-[28px] md:text-[40px]"
-                        data-i18n="sales_distribution">
+                    <p class="font-semibold text-[28px] md:text-[40px] sales-title"
+                        data-i18n="sales_distribution_0">
                     </p>
                     <div class="z-10 flex md:hidden">
-                        <div id="carousel" class="carousel bg-red-500 w-full">
-                            <div class="carousel-inner">
+                        <div id="carousel" class="carousel">
+                            <div class="carousel-inner ">
                                 <img src="./assets/section3.png" alt="section3"
                                     class="carousel-item md:h-[400px] md:w-auto object-cover flex justify-center items-center" />
-                                <img src="./assets/section3.png" alt="section3"
+                                <img src="./assets/section1.png" alt="section3"
                                     class="carousel-item md:h-[400px] md:w-auto object-cover flex justify-center items-center" />
-                                <img src="./assets/section3.png" alt="section3"
+                                <img src="./assets/product1.png" alt="section3"
                                     class="carousel-item md:h-[400px] md:w-auto object-cover flex justify-center items-center" />
                             </div>
                             <div class="carousel-nav md:px-8 px-4">
@@ -398,21 +398,20 @@
                             <div class="carousel-dots"></div>
                         </div>
                     </div>
-                    <p data-i18n="sales_distribution_content"
-                        class="leading-[30px] md:leading-[35px] md:w-[85%] align-middle tracking-[2px] text-hitam font-normal text-justify lg:text-[18px] md:text-[16px] sm:text-[14px] text-[14px]">
+                    <p data-i18n="sales_distribution_content_0"
+                        class="sales-content leading-[30px] md:leading-[35px] md:w-[85%] align-middle tracking-[2px] text-hitam font-normal text-justify lg:text-[18px] md:text-[16px] sm:text-[14px] text-[14px]">
                     </p>
                 </div>
                 <div class="z-10 hidden md:flex">
                     <div id="carousel" class="carousel">
                         <div class="carousel-inner">
                             <img src="./assets/section3.png" alt="section3"
-                                class="carousel-item md:h-[400px] md:w-[500px] object-cover flex justify-center items-center" />
-                            <img src="./assets/section3.png" alt="section3"
-                                class="carousel-item md:h-[400px] md:w-[500px] object-cover flex justify-center items-center" />
-                            <img src="./assets/section3.png" alt="section3"
-                                class="carousel-item md:h-[400px] md:w-[500px] object-cover flex justify-center items-center" />
-                            <img src="./assets/section3.png" alt="section3"
-                                class="carousel-item md:h-[400px] md:w-[500px] object-cover flex justify-center items-center" />
+                                class="carousel-item md:h-[400px] md:w-[600px] object-cover flex justify-center items-center" />
+                            <img src="./assets/section1.png" alt="section3"
+                                class="carousel-item md:h-[400px] md:w-[600px] object-cover flex justify-center items-center" />
+                            <img src="./assets/product1.png" alt="section3"
+                                class="carousel-item md:h-[400px] md:w-[600px] object-cover flex justify-center items-center" />
+
                         </div>
                         <div class="carousel-nav md:px-8 px-4">
                             <button class="prevBtn text-2xl">&lt;</button>
@@ -432,23 +431,140 @@
                     class="leading-[30px] md:leading-[35px] md:w-[85%] align-middle tracking-[2px] text-hitam font-normal text-justify lg:text-[18px] md:text-[16px] sm:text-[14px] text-[14px]">
                 </p>
 
+                <!-- Desktop -->
+                <div
+                    class="hidden md:grid md:grid-cols-3 md:justify-between gap-4 mt-2">
+                    <div class="flex flex-col gap-3">
+                        <img src="./assets/product1.png"
+                            class="w-full h-auto" />
+                        <p class="lg:text-[18px] md:text-[16px] sm:text-[14px] text-[14px] font-semibold"
+                            data-i18n="product_1"></p>
+                        <p class="lg:text-[16px] md:text-[14px] sm:text-[13px] text-[13px] font-light w-[98%]"
+                            data-i18n="product_1_desc"></p>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <img src="./assets/product2.png"
+                            class="w-full h-auto" />
+                        <p class="lg:text-[18px] md:text-[16px] sm:text-[14px] text-[14px] font-semibold"
+                            data-i18n="product_2"></p>
+                        <p class="lg:text-[16px] md:text-[14px] sm:text-[13px] text-[13px] font-light w-[98%]"
+                            data-i18n="product_2_desc"></p>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <img src="./assets/product3.png"
+                            class="w-full h-auto" />
+                        <p class="lg:text-[18px] md:text-[16px] sm:text-[14px] text-[14px] font-semibold"
+                            data-i18n="product_3"></p>
+                        <p class="lg:text-[16px] md:text-[14px] sm:text-[13px] text-[13px] font-light w-[98%]"
+                            data-i18n="product_3_desc"></p>
+                    </div>
+                </div>
 
+                <!-- Mobile -->
+                <div class="md:hidden scroll-container gap-4 mt-2">
+                    <div class="scroll-item flex flex-col gap-3">
+                        <img src="./assets/product1.png"
+                            class="w-full h-auto" />
+                        <div class="flex flex-col gap-1">
+                            <p class="lg:text-[18px] md:text-[16px] sm:text-[14px] text-[14px] font-semibold"
+                                data-i18n="product_1"></p>
+                            <p class="lg:text-[16px] md:text-[14px] sm:text-[13px] text-[13px] font-light"
+                                data-i18n="product_1_desc"></p>
+                        </div>
+                    </div>
+                    <div class="scroll-item flex flex-col gap-3">
+                        <img src="./assets/product2.png"
+                            class="w-full h-auto" />
+                        <div class="flex flex-col gap-1">
+                            <p class="lg:text-[18px] md:text-[16px] sm:text-[14px] text-[14px] font-semibold"
+                                data-i18n="product_2"></p>
+                            <p class="lg:text-[16px] md:text-[14px] sm:text-[13px] text-[13px] font-light"
+                                data-i18n="product_2_desc"></p>
+                        </div>
+                    </div>
+                    <div class="scroll-item flex flex-col gap-3">
+                        <img src="./assets/product3.png"
+                            class="w-full h-auto" />
+                        <div class="flex flex-col gap-1">
+                            <p class="lg:text-[18px] md:text-[16px] sm:text-[14px] text-[14px] font-semibold"
+                                data-i18n="product_3"></p>
+                            <p class="lg:text-[16px] md:text-[14px] sm:text-[13px] text-[13px] font-light"
+                                data-i18n="product_3_desc"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Vertical Scroll Example -->
-            <div class="scroll-container">
-                <div class="scroll-item">Item 1</div>
-                <div class="scroll-item">Item 2</div>
-                <div class="scroll-item">Item 3</div>
-                <div class="scroll-item">Item 4</div>
-                <div class="scroll-item">Item 5</div>
-                <div class="scroll-item">Item 6</div>
-                <div class="scroll-item">Item 7</div>
-                <div class="scroll-item">Item 8</div>
-                <div class="scroll-item">Item 9</div>
-                <div class="scroll-item">Item 10</div>
-                <!-- Add more items as needed -->
+            <div class="flex flex-col md:flex-row justify-between gap-4">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15843.382790113397!2d107.6842174!3d-6.9090468!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68dd43b4b8305f%3A0x5e6731c724bbddb1!2sPT%20Silver%20Kris!5e0!3m2!1sid!2sid!4v1710196208516!5m2!1sid!2sid"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    class="md:w-[50%] h-auto aspect-square"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="w-full md:w-[50%] flex flex-col gap-6">
+                    <div class="flex flex-col gap-4">
+                        <p class="font-semibold text-[24px] md:text-[36px]"
+                            data-i18n="connect">
+                        </p>
+                        <p data-i18n="connect_description"
+                            class="leading-[30px] md:leading-[35px] align-middle tracking-[2px] text-hitam font-normal text-justify lg:text-[18px] md:text-[16px] sm:text-[14px] text-[14px]">
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <!-- Name -->
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[14px] md:text-[16px] lg:text-[18px]"
+                                data-i18n="name">
+                            </p>
+                            <input data-i18n="name_placeholder"
+                                class="border-hitam border p-2 px-4 input-name" />
+                        </div>
+                        <!-- Email -->
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[14px] md:text-[16px] lg:text-[18px]"
+                                data-i18n="email">
+                            </p>
+                            <input data-i18n="email_placeholder"
+                                class="border-hitam border p-2 px-4 input-email" />
+                        </div>
+                        <!-- Phone -->
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[14px] md:text-[16px] lg:text-[18px]"
+                                data-i18n="phone">
+                            </p>
+                            <input data-i18n="phone_placeholder"
+                                class="border-hitam border p-2 px-4 input-phone" />
+                        </div>
+                        <!-- Company -->
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[14px] md:text-[16px] lg:text-[18px]"
+                                data-i18n="company">
+                            </p>
+                            <input data-i18n="company_placeholder"
+                                class="border-hitam border p-2 px-4 input-company" />
+                        </div>
+                        <!-- Message -->
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[14px] md:text-[16px] lg:text-[18px]"
+                                data-i18n="additional_message">
+                            </p>
+                            <div class="relative w-full h-[150px] bg-red-500">
+                                <textarea
+                                    data-i18n="additional_message_placeholder"
+                                    class="border-hitam border p-2 px-4 input-additional h-full w-full pr-[80px]"
+                                    maxlength="300"></textarea>
+                                <p
+                                    class="absolute top-2 right-4 input-additional-count">
+                                    0 / 300</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button data-i18n="submit"
+                        class="border-hitam border-2 p-3 md:w-[30%] w-[45%] font-medium text-lg"
+                        onclick="submitForm()"></button>
+                </div>
             </div>
+
         </div>
     </div>
 

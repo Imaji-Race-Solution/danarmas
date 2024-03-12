@@ -6,12 +6,13 @@ html,
 body {
     margin: 0;
     padding: 0;
-    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
 }
 
 body.sidebar-open {
     margin: 0;
     height: 100%;
+    overflow-x: hidden;
     overflow: hidden;
 }
 
@@ -133,15 +134,136 @@ body.sidebar-open {
 
 .scroll-item {
     flex: 1 1 auto;
-    width: 200px;
-    min-width: 200px;
+    width: 300px;
+    min-width: 300px;
     margin-right: 10px;
     scroll-snap-align: start;
-    background-color: #ddd;
-    padding: 20px;
-    border-radius: 8px;
 }
 
 .scroll-container::-webkit-scrollbar {
     display: none;
+}
+
+.swal2-title {
+    font-size: 24px !important;
+    font-family: 'Poppins';
+}
+
+.typewriter p {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.typewriter p::after {
+    content: '|';
+    display: inline-block;
+    width: 0;
+    animation: blink 1s step-end infinite;
+    color: #75c59d;
+}
+
+@keyframes blink {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.typewriter p.finished::after {
+    content: '';
+}
+
+.fade-in {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slide-right,
+.slide-left {
+    width: 100%;
+}
+
+.slide-right {
+    animation: 3s slide-right;
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-left {
+    animation: 3s slide-left;
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
