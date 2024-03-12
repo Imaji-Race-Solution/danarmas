@@ -169,9 +169,9 @@ carousels.forEach((carousel) => {
         startX = 0;
         startY = 0;
     });
-});
 
-// setInterval(moveToNextSlide, 5000);
+    setInterval(moveToPrevSlide, 7000);
+});
 
 // Mobile Sidebar
 const buttonMenu = document.getElementById('buttonMenu');
