@@ -657,6 +657,11 @@ video {
   height: 1.25rem;
 }
 
+.size-7 {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
 .h-\[150px\] {
   height: 150px;
 }
@@ -675,10 +680,6 @@ video {
 
 .w-\[100\%\] {
   width: 100%;
-}
-
-.w-\[125px\] {
-  width: 125px;
 }
 
 .w-\[150px\] {
@@ -884,6 +885,10 @@ video {
 
 .pr-\[80px\] {
   padding-right: 80px;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-justify {
@@ -1212,6 +1217,14 @@ body.sidebar-open {
 }
 
 .fade-in {
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
+}
+
+.fade-in-delay {
   animation: fadeIn ease 3s;
   -webkit-animation: fadeIn ease 3s;
   -moz-animation: fadeIn ease 3s;

@@ -192,6 +192,14 @@ body.sidebar-open {
     -ms-animation: fadeIn ease 3s;
 }
 
+.fade-in-delay {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

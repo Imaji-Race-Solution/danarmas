@@ -281,7 +281,9 @@ const observerCounter = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting && entry.intersectionRatio > 0) {
-                startCounter(entry.target);
+                setTimeout(() => {
+                    startCounter(entry.target);
+                }, 1000);
                 observerCounter.unobserve(entry.target);
             }
         });
