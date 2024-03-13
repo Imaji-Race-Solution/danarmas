@@ -17,7 +17,7 @@ const updateContent = (langData) => {
         const msg = langData[key] ?? key;
 
         if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-            element.placeholder = msg;
+            // element.placeholder = msg;
         } else {
             element.textContent = msg;
         }
