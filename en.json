@@ -10,6 +10,7 @@
     "be_part": "Be Part of Danar Mas Group",
     "job_opening": "Job Opening",
     "our_technology": "Our Technology",
+    "our_environment": "Our Environment",
     "spinning": "Spinning",
     "weaving": "Weaving",
     "product_overview": "Product Overview",
@@ -55,5 +56,6 @@
     "submit": "Submit",
     "incomplete_form": "Incomplete Form",
     "incomplete_form_message": "Please fill all the form!",
-    "success_form": "Thank you, we have received your message. Our team will immediately answer your message via your contact."
+    "success_form": "Thank you, we have received your message. Our team will immediately answer your message via your contact.",
+    "footer_title": "HEAD OFFICE / FACTORY"
 }

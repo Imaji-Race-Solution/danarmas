@@ -10,6 +10,7 @@
     "be_part": "Menjadi Bagian Dari Danar Mas Group",
     "job_opening": "Lowongan Pekerjaan",
     "our_technology": "Teknologi Kami",
+    "our_environment": "Lingkungan Kami",
     "spinning": "Pemintalan",
     "weaving": "Penenunan",
     "product_overview": "Tinjau Produk",
@@ -55,5 +56,6 @@
     "submit": "Kirim",
     "incomplete_form": "Form Tidak Lengkap",
     "incomplete_form_message": "Silahkan untuk mengisi semua form!",
-    "success_form": "Terima Kasih, pesan anda telah kami terima. Tim kami akan segera menjawab pesan anda melalui kontak anda."
+    "success_form": "Terima Kasih, pesan anda telah kami terima. Tim kami akan segera menjawab pesan anda melalui kontak anda.",
+    "footer_title": "KANTOR PUSAT / PABRIK"
 }
