@@ -203,12 +203,13 @@ backdrop.addEventListener('click', (event) => {
 const counters = document.querySelectorAll('.counter');
 
 const startCounter = (counter) => {
+    const from = parseFloat(counter.getAttribute('count-from'));
     const to = parseFloat(counter.getAttribute('count-to'));
     const duration = parseFloat(counter.getAttribute('duration'));
     const symbol = counter.getAttribute('end-symbol');
     const isDecimal = counter.getAttribute('decimal');
 
-    let counterValue = 0;
+    let counterValue = from ? from : 0;
     const increment = to / (duration / 5);
 
     const timer = setInterval(() => {
@@ -225,6 +226,7 @@ const startCounter = (counter) => {
                 const span = document.createElement('span');
                 if (symbol === '+') {
                     span.className = 'text-hijau';
+                    span.style = 'rgb(117 197 157)';
                 }
                 span.innerHTML = symbol;
                 counter.appendChild(span);
@@ -310,7 +312,7 @@ const typeWriterEffect = (element) => {
             let wordHtml = '<span';
 
             if (word === 'Collaboration') {
-                wordHtml += ' class="text-hijau"';
+                wordHtml += ' class="text-hijau" style="rgb(117 197 157)"';
             }
 
             wordHtml += '>';
