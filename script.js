@@ -54,7 +54,7 @@ const changeLanguage = async (lang) => {
 // Carousel
 const carousels = document.querySelectorAll('.carousel');
 let viewport =
-    document.documentElement.clientWidth > 752 ? 'desktop' : 'mobile';
+    document.documentElement.clientWidth > 768 ? 'desktop' : 'mobile';
 let currentIndex = 0;
 let touchStartX = 0;
 let touchEndX = 0;
@@ -309,10 +309,13 @@ const typeWriterEffect = (element) => {
     const typeWord = (wordIndex) => {
         if (wordIndex < words.length) {
             let word = words[wordIndex];
-            let wordHtml = '<span';
+            let wordHtml = '';
 
-            if (word === 'Collaboration') {
-                wordHtml += ' class="text-hijau" style="rgb(117 197 157)"';
+            if (word !== 'Collaboration') {
+                wordHtml += '<span';
+            } else if (word === 'Collaboration') {
+                wordHtml +=
+                    '<br class="md:flex hidden"/> <span class="text-hijau" style="rgb(117 197 157)"';
             }
 
             wordHtml += '>';
@@ -345,6 +348,9 @@ const observerSection1 = new IntersectionObserver(
         entries.forEach((entry) => {
             if (entry.isIntersecting && entry.intersectionRatio > 0) {
                 const typewriter = document.querySelector('.typewriter-p');
+                const section1Text = document.querySelector('.section1-text');
+                section1Text.classList.add('fade-in');
+                section1Text.classList.remove('opacity-0');
 
                 typeWriterEffect(typewriter);
                 observerSection1.unobserve(entry.target);

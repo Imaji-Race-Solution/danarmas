@@ -275,3 +275,8 @@ body.sidebar-open {
         transform: translateX(0);
     }
 }
+
+.text-hijau {
+    --tw-text-opacity: 1;
+    color: rgb(117 197 157 / var(--tw-text-opacity));
+}
