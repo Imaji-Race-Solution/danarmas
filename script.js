@@ -220,7 +220,9 @@ const startCounter = (counter) => {
             if (Boolean(isDecimal)) {
                 counter.textContent = to.toString().replace('.', ',');
             } else {
-                counter.textContent = to;
+                counter.textContent = to
+                    .toLocaleString('en-US')
+                    .replace(',', '.');
             }
             if (symbol !== null) {
                 const span = document.createElement('span');
