@@ -296,6 +296,22 @@ const observerCounter = new IntersectionObserver(
 );
 
 counters.forEach((counter) => {
+    const targetRect = counter.getBoundingClientRect();
+    if (targetRect.top >= 0 && targetRect.bottom <= window.innerHeight) {
+        const observerCounter = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && entry.intersectionRatio > 0) {
+                        setTimeout(() => {
+                            startCounter(entry.target);
+                        }, 800);
+                        observerCounter.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 1, root: null, rootMargin: '0px' }
+        );
+    }
     observerCounter.observe(counter);
 });
 
