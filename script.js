@@ -382,17 +382,22 @@ observerSection1.observe(section1);
 
 // Section 2
 const section2 = document.querySelector('.section-2');
+const section2TargetRect = section2.getBoundingClientRect();
+
 const observerSection2 = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting && entry.intersectionRatio > 0) {
+                console.log('intersect');
                 section2.classList.add('fade-in');
                 section2.classList.remove('opacity-0');
+                observerSection2.unobserve(entry.target);
             }
         });
     },
     { threshold: 1, root: null, rootMargin: '0px' }
 );
+
 observerSection2.observe(section2);
 
 window.addEventListener('DOMContentLoaded', async () => {

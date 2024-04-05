@@ -251,14 +251,16 @@ body.sidebar-open {
 }
 
 .slide-right {
-    animation: 3s slide-right;
+    animation: 2s slide-right;
 }
 
 @keyframes slide-right {
     from {
-        transform: translateX(-100%);
+        transform: translateY(100%);
+        opacity: 0;
     }
     to {
+        opacity: 1;
         transform: translateX(0);
     }
 }
