@@ -62,6 +62,7 @@ let isTouchDrag = false;
 let isDragging = false;
 let startX = 0;
 let startY = 0;
+
 const salesTitle = document.querySelector('.sales-title');
 const salesContent = document.querySelector('.sales-content');
 
@@ -89,11 +90,13 @@ carousels.forEach((carousel) => {
     };
 
     const moveToNextSlide = () => {
+        console.log('prev2');
         currentIndex = (currentIndex + 1) % totalItems;
         moveToSlide(currentIndex);
     };
 
     const moveToPrevSlide = () => {
+        console.log('prev');
         currentIndex = (currentIndex - 1 + totalItems) % totalItems;
         moveToSlide(currentIndex);
     };
@@ -123,6 +126,9 @@ carousels.forEach((carousel) => {
 
     prevBtn.addEventListener('click', moveToPrevSlide);
     nextBtn.addEventListener('click', moveToNextSlide);
+
+    prevBtn.addEventListener('touchend', moveToPrevSlide);
+    nextBtn.addEventListener('touchend', moveToNextSlide);
 
     carousel.addEventListener('touchstart', (e) => {
         e.preventDefault();
@@ -170,7 +176,7 @@ carousels.forEach((carousel) => {
         startY = 0;
     });
 
-    setInterval(moveToPrevSlide, 7000);
+    // setInterval(moveToPrevSlide, 7000);
 });
 
 // Mobile Sidebar
