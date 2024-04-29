@@ -232,8 +232,8 @@ const startCounter = (counter) => {
             }
             if (symbol !== null) {
                 const span = document.createElement('span');
-                if (symbol === '+') {
-                    span.className = 'text-hijau';
+                if (symbol.includes('+')) {
+                    span.className = 'text-hijau ml-2';
                     span.style = 'rgb(117 197 157)';
                 }
                 span.innerHTML = symbol;
@@ -357,7 +357,7 @@ const typeWriterEffect = (element) => {
             setTimeout(() => {
                 wordSpan.textContent += word.charAt(charIndex);
                 typeCharacters(charIndex + 1, word, wordSpan, wordIndex);
-            }, 100);
+            }, 60);
         } else {
             element.innerHTML += ' ';
             typeWord(wordIndex + 1);
